@@ -10,6 +10,7 @@ plugins:
 # serverless-webpack configuration
 # Enable auto-packing of external modules
 custom:
+  stage: ${opt:stage, self:provider.stage}
   serverless-offline:
     port: 4000
   bundle:
@@ -19,7 +20,7 @@ provider:
   name: aws
   runtime: nodejs12.x
   region: us-east-1
-  stage: ${opt:stage, self:provider.stage}
+  stage: dev
   TableDB: ${self:custom.stage}-tableDB
   tableThroughputs:
     prod: 1
