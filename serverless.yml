@@ -35,6 +35,7 @@ provider:
     name_of_var: ${env:NAME_OF_VAR}
     tableDB: ${self:custom.tableDB}
     account: ${env:ACCOUNT}
+    queue_name: my_queue
 
   iamRoleStatements:
     - Effect: Allow
